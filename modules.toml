@@ -63,7 +63,7 @@ contains = ["CLAUDE.md", "README.md", "self.md", "modules.toml", "LICENSE"]
 # load   = "session-end"
 
 # [[protocols]]
-# name   = "code-review"
-# source = "repos/<repo>/docs/review.md"
+# name   = "athanor"
+# source = "commons/athanor/briefing.md"
 # load   = "on-demand"
-# when   = "reviewing a PR or a diff"
+# when   = "the user wants to resume or work in the athanor"

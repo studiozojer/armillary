@@ -9,7 +9,7 @@
 # ── composition slots ────────────────────────────────────────────────────────
 # These folders are tracked (their README ships), but everything composed INTO
 # them is the user's own independent git repos — ignored. The router never
-# tracks its guests; that is what "agent-agnostic" means on disk.
+# tracks its guests; that is what "model-agnostic" means on disk.
 /models/*
 !/models/README.md
 /repos/*

@@ -1,0 +1,21 @@
+# OS cruft
+.DS_Store
+**/.DS_Store
+
+# Editor / harness state — per-machine, never ships
+.obsidian/
+.claude/
+
+# ── composition slots ────────────────────────────────────────────────────────
+# These folders are tracked (their README ships), but everything composed INTO
+# them is the user's own independent git repos — ignored. The router never
+# tracks its guests; that is what "agent-agnostic" means on disk.
+/models/*
+!/models/README.md
+/repos/*
+!/repos/README.md
+
+# Your commons is a SINGLE repo dropped in at this path (your way of working) —
+# not a container of many guests like models/ and repos/, so the whole directory
+# is ignored. A bare clone has no commons; the README explains how to add one.
+/commons/

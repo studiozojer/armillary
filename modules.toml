@@ -1,0 +1,69 @@
+# armillary — composition manifest
+#
+# the armillary is a minimal, agent-agnostic router. it composes the modules declared here.
+# clone each module into the `path` shown to assemble a working workspace. NOTHING here is
+# required — a bare router runs with no modules at all.
+#
+# this file is the PUBLIC SCHEMA + examples. your actual composition (private repo URLs,
+# per-machine paths) belongs in a gitignored `modules.local.toml` or in `CLAUDE.local.md`,
+# so the published router stays agnostic to who occupies it.
+
+[router]
+# the minimal core that IS this repo — always present, never a module.
+contains = ["CLAUDE.md", "README.md", "self.md", "modules.toml", "LICENSE"]
+
+# ── agents ──────────────────────────────────────────────────────────────────
+# each agent is its own git repo, composed under `models/`. the router routes to
+# whichever are present; declare your own.
+
+# [[agents]]
+# name = "<agent>"
+# path = "models/<agent>"
+# repo = "<your-agent-repo>"     # keep private URLs out of the public manifest
+# note = "what this agent is for"
+
+# ── commons ─────────────────────────────────────────────────────────────────
+# your way of working — wikis, a board, practices — as a SINGLE repo dropped in at
+# commons/ and gitignored. workspace-scoped, not universal: bring your own, or clone
+# the template commons to start from (see README).
+
+# [[commons]]
+# name = "commons"
+# path = "commons"
+# repo = "<your-commons-repo>"
+# note = "wikis, board, practices, collaborative space"
+
+# ── code / project repos ────────────────────────────────────────────────────
+# product or project repos your agents act on. each its own git repo.
+
+# [[repos]]
+# name = "<repo>"
+# path = "repos/<repo>"
+# repo = "<your-repo>"
+
+# ── protocols ────────────────────────────────────────────────────────────────
+# the disciplines the dispatcher loads. a protocol is a "how to do X" doc that any
+# composed module brings — an agent, the commons, a repo. declare it here with a
+# load-timing and the router composes it into the session at the right moment.
+# DECLARATIVE: the router knows a protocol exists because this file names it (it does
+# NOT scan), so the manifest stays legible — what loads, and when, in one place.
+#
+#   load = "boot"         read at session start; shapes the session from the start
+#   load = "on-demand"    a pointer; the body is read only when `when` matches the work
+#   load = "session-end"  runs at close — best-effort (a clean session close isn't promised)
+
+# [[protocols]]
+# name   = "board"
+# source = "commons/practices/board/practice.md"
+# load   = "boot"
+
+# [[protocols]]
+# name   = "session-metrics"
+# source = "commons/practices/session-metrics/practice.md"
+# load   = "session-end"
+
+# [[protocols]]
+# name   = "code-review"
+# source = "repos/<repo>/docs/review.md"
+# load   = "on-demand"
+# when   = "reviewing a PR or a diff"

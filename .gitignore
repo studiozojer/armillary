@@ -19,3 +19,4 @@
 # not a container of many guests like models/ and repos/, so the whole directory
 # is ignored. A bare clone has no commons; the README explains how to add one.
 /commons/
+/local

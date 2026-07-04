@@ -12,7 +12,7 @@ When launched from the router root (not from inside a composed module):
 3. **Register** every `load = "on-demand"` protocol as a pointer — note its `name` and `when`, but **do not read the body** (lazy by design; see § Protocols).
 4. **Surface** briefly, at the top of the session, whatever boot-load produced (a board, an offer). With nothing composed, there is nothing to surface — proceed.
 5. **Route the opening message:**
-   - Names a composed module (agent or repo), or clearly describes work in its domain → dispatch to it; follow its own boot protocol as if launched there.
+   - Names a composed module (agent or repo), or clearly describes work in its domain → dispatch to it; follow its own boot protocol as if launched there. An explicit `@<agent>` summon is boot-gated where a `summon-boot` hook is composed: the summoned model's own boot runs first — before any repo/skill/tool touch except this dispatcher — even when the same message also names a destination (the destination is material to orient *through*, not a reason to skip orienting).
    - Matches a registered `on-demand` protocol's `when` → read that protocol's body now, then proceed.
    - Meta/structural — about the router or the workspace itself → stay at dispatcher; load `self.md` before responding.
    - Nothing composed → everything is dispatcher-layer.

@@ -1,4 +1,4 @@
-# armillary
+# the armillary
 
 **A model-agnostic sub-harness for routing token flows.**
 

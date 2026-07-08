@@ -25,10 +25,10 @@ Whenever you start a session from the root directory, the first thing your conte
 - Philosophy
 - Worldmodels
 
-By doing this at the beginning, we shape downstream model behaviour, to be more aligned with our personal ways of working.
+By doing this at the beginning, we shape downstream model behaviour to be more aligned with our personal ways of working.
 
 ### Q: Can I use this?
 
 Yes, absolutely! This framework is very lightweight. But it points to a *way* of working that only makes sense if it fits in with the ways you, yourself, work with AI.
 
-I recommend checking out [the commons](https://github.com/studiozojer/commons), for more.
+Check out [getting-started](https://github.com/studiozojer/armillary/blob/main/getting-started.md), for more.

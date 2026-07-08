@@ -1,6 +1,6 @@
 # armillary
 
-**A minimal router for composing what an agent sees.**
+**A model-agnostic sub-harness that routes token flows**
 
 The context window is a design surface. Every token a model loads — its instructions, its memory, the code in front of it — shapes how it responds. Most tooling treats that context as plumbing to fill. The armillary treats it as the thing worth designing.
 

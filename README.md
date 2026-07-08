@@ -19,7 +19,11 @@ In the armillary, there are three types of top-level directories:
 2. Repos, a.k.a. your code bases
 3. Commons, a.k.a. shared, persistent, graph-structured knowledge
 
-Whenever you start a session from the root directory, the first thing your context window does is load up a set of tokens. This might loading project history, feature maps, etc.
+Whenever you start a session from the root directory, the first thing your context window does is load up a set of tokens. This might mean:
+- Project specs
+- Changelogs
+- Philosophy
+- Worldmodels
 
 By doing this at the beginning, we shape downstream model behaviour, to be more aligned with our personal ways of working.
 

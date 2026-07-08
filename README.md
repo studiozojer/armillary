@@ -1,7 +1,6 @@
 # armillary
 
-**A model-agnostic sub-harness for routing token flows**
-For philosophy, see [here](https://github.com/studiozojer/armillary/blob/main/philosophy.md).
+**A model-agnostic sub-harness for routing token flows.** For philosophy, see [here](https://github.com/studiozojer/armillary/blob/main/philosophy.md).
 
 ![hero.png](https://schultzdavidg-portfolio.s3.us-west-1.amazonaws.com/images/armillary/hero.png)
 

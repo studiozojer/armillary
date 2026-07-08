@@ -1,12 +1,12 @@
 # armillary
 
-![[hero.png]]
+![hero.png]([https://schultzdavidg-portfolio.s3.us-west-1.amazonaws.com/images/armillary/hero.png](https://schultzdavidg-portfolio.s3.us-west-1.amazonaws.com/images/armillary/hero.png))
 
 **A model-agnostic sub-harness for routing token flows**
 
 Every token in the session influences model behavior — so the theory is, if we are intentional about what tokens get loaded, we can shape more efficient model behavior.
 
-For philosophy, see [[philosophy|here]].
+For philosophy, see [here](https://github.com/studiozojer/armillary/blob/main/philosophy.md).
 
 ---
 

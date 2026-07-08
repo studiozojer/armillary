@@ -1,0 +1,1 @@
+Every token in the session influences model behavior — so the theory is, if we are intentional about what tokens get loaded, we can shape more efficient model behavior.

@@ -1,39 +1,26 @@
 # armillary
 
-![hero.png](https://schultzdavidg-portfolio.s3.us-west-1.amazonaws.com/images/armillary/hero.png)
-
 **A model-agnostic sub-harness for routing token flows**
-
-Every token in the session influences model behavior — so the theory is, if we are intentional about what tokens get loaded, we can shape more efficient model behavior.
-
 For philosophy, see [here](https://github.com/studiozojer/armillary/blob/main/philosophy.md).
 
----
+![hero.png](https://schultzdavidg-portfolio.s3.us-west-1.amazonaws.com/images/armillary/hero.png)
 
 ## Q: What is a sub-harness?
 
-A sub-harness is just a way of structuring your directories, in order to push agents toward specific types of behaviour.
+A sub-harness is just a way of structuring your directories that pushes agents toward specific types of behaviour. 
+
+While it is a harness in the sense that it directs AI behaviour, it is agnostic towards the actual CLI. You can use [Hermes](https://hermes-agent.nousresearch.com/), [Pi](https://pi.dev/), [Claude Code](https://claude.ai/)—whatever you like—with a sub-harness.
+
+### Q: How does it work?
 
 In the armillary, there are three types of top-level directories:
 1. Agents, a.k.a. worldmodels
 2. Repos, a.k.a. your code bases
 3. Commons, a.k.a. shared, persistent, graph-structured knowledge
 
-It's called a "sub-harness" because while it is a harness in the sense that it directs AI behaviour, it is agnostic towards the actual CLI. You can use [Hermes](https://hermes-agent.nousresearch.com/), [Pi](https://pi.dev/), [Claude Code](https://claude.ai/)—whatever you like—with a sub-harness.
+Whenever you start a session from the root directory, the first thing your context window does is load up a set of tokens. This might loading project history, feature maps, etc.
 
-### Q: How does it work?
-
-First, boot your session into the top-level dir.
-
-Then, in your first message, you ask the armillary to route you towards the tokens you need. For example, you might direct it to pick up one of your agents's boot protocols.
-
-``` CLI
-> @tycho can you orient? i want to clean up the athanor today
-```
-
-After sending this message, the armillary will follow a chain of text files, which illustrate protocols, first principles, historical logs, etc. to prepare the session for the work you want to do.
-
-Everything else you do downstream will follow suit.
+By doing this at the beginning, we shape downstream model behaviour, to be more aligned with our personal ways of working.
 
 ### Q: Can I use this?
 

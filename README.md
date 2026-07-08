@@ -8,7 +8,9 @@
 
 A sub-harness is just a way of structuring your directories that pushes agents toward specific types of behaviour. 
 
-While it is a harness in the sense that it directs AI behaviour, it is agnostic towards the actual CLI. You can use [Hermes](https://hermes-agent.nousresearch.com/), [Pi](https://pi.dev/), [Claude Code](https://claude.ai/)—whatever you like—with a sub-harness.
+While it is a harness in the sense that it directs AI behaviour, it is really only a layer underneath the actual CLI. You can use [Hermes](https://hermes-agent.nousresearch.com/), [Pi](https://pi.dev/), [Claude Code](https://claude.ai/)—whatever you like—with a sub-harness.
+
+The point of a sub-harness is to organize your file system to enable more efficient knowledge traversal.
 
 ### Q: How does it work?
 

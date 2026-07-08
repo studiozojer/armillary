@@ -13,7 +13,7 @@ Whenever you start a session from a directory, the first thing your harness does
  
  It organizes all your work into three directories; the idea is, when you add a .gitignored folder into one of these directories, it allows you to interact with it alongside your other work—all from a single access point.
 ## repos/
-Contains your codebases, similar to a monorepo—except everything in here is .gitignored. The benefit of this system is it allows you to separate big-picture context away from the code. More to the point, it gives you access to all your different repositories from the same access point. 
+Contains your codebases, similar to a monorepo—except everything in here is .gitignored. The benefit of this system is it allows you to separate big-picture context away from the code. More to the point, it gives you a single access-point to all your repositories, knowledge bases, etc. 
 ## commons/
 This is a repository pattern designed to hold shared knowledge bases—bespoke protocols, wikis, documents, specs, etc. Commons are designed to be extremely agnostic; I have a base template [here](https://github.com/studiozojer/commons/tree/main), but you can structure these however you want. The point of this category is to delineate your shared workspaces with people.
 

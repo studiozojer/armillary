@@ -10,7 +10,7 @@ For philosophy, see [here](https://github.com/studiozojer/armillary/blob/main/ph
 
 ### Q: What is a sub-harness?
 
-A sub-harness is just a way of structuring your directories to push agents toward specific types of behaviour. It's not a harness in the CLI sense (e.g.[Hermes](https://hermes-agent.nousresearch.com/), [Pi](https://pi.dev/), [Claude Code](https://claude.ai/)). While it does direct model behvaiour, a sub-harness is a layer underneath. The point is to organize your files in such a way that agents can traverse them more efficiently.
+A sub-harness is just a way of structuring your directories to push agents toward specific types of behaviour. While it's not a harness in the CLI sense (e.g.[Hermes](https://hermes-agent.nousresearch.com/), [Pi](https://pi.dev/), [Claude Code](https://claude.ai/)), it does direct model behaviour. It's essentially a structural layer underneath your terminal window—and the point is that it lets you organize your files in such a way that helps your agents be more effective & efficient.
 
 ### Q: How does it work?
 

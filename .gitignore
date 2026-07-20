@@ -20,3 +20,6 @@
 # is ignored. A bare clone has no commons; the README explains how to add one.
 /commons/
 /local
+
+# pi extensions — machine-local, per-session
+/.pi

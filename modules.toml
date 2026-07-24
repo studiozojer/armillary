@@ -12,15 +12,18 @@
 # the minimal core that IS this repo — always present, never a module.
 contains = ["CLAUDE.md", "README.md", "self.md", "modules.toml", "LICENSE"]
 
-# ── agents ──────────────────────────────────────────────────────────────────
-# each agent is its own git repo, composed under `models/`. the router routes to
-# whichever are present; declare your own.
+# ── operators ────────────────────────────────────────────────────────────────
+# an operator is a composed identity (its files, graph, protocols) — distinct from
+# the model (the engine piloting it in a session). each operator is its own git
+# repo, composed under `operators/`. the router routes to whichever are present;
+# declare your own. (legacy section names [[agents]]/[[models]] and `models/`
+# paths remain accepted by tooling during the 2026-07-24 rename migration.)
 
-# [[agents]]
-# name = "<agent>"
-# path = "models/<agent>"
-# repo = "<your-agent-repo>"     # keep private URLs out of the public manifest
-# note = "what this agent is for"
+# [[operators]]
+# name = "<operator>"
+# path = "operators/<operator>"
+# repo = "<your-operator-repo>"  # keep private URLs out of the public manifest
+# note = "what this operator is for"
 
 # ── commons ─────────────────────────────────────────────────────────────────
 # your way of working — wikis, a board, practices — as a SINGLE repo dropped in at

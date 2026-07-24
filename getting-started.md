@@ -18,13 +18,13 @@ Contains your codebases, similar to a monorepo—except everything in here is .g
 This is a repository pattern designed to hold shared knowledge bases—bespoke protocols, wikis, documents, specs, etc. Commons are designed to be extremely agnostic; I have a base template [here](https://github.com/studiozojer/commons/tree/main), but you can structure these however you want. The point of this category is to delineate your shared workspaces with people.
 
 The one thing commons do that they contain your personal ways of working. For example, you might store bespoke, self-improving skills here. These interface with modules.toml (a top-level index that makes sure the harness knows where to find these skills, practices, and protocols).
-## models/
-Contains your agents, which I lovingly refer to as 'worldmodels'. These folders contain the map to a specific identity's brain. For example:
+## operators/
+Contains your operators, which I lovingly refer to as 'worldmodels'. These folders contain the map to a specific identity's brain — the operator is the identity; the *model* is whichever engine pilots it in a given session. For example:
 
 ``` Prompt
 > @tycho, can you orient and tell me about how you look at the world?
 ```
 
-With this prompt, the armillary will route to `armillary/models/tycho/`, which itself contains a CLAUDE.md, a journal, and a unique worldview. To learn more, check out [this guide](https://github.com/studiozojer/commons/blob/main/grow-your-own-model.md).
+With this prompt, the armillary will route to `armillary/operators/tycho/`, which itself contains a CLAUDE.md, a journal, and a unique worldview. To learn more, check out [this guide](https://github.com/studiozojer/commons/blob/main/grow-your-own-model.md).
 
 

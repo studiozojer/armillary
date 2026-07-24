@@ -9,11 +9,14 @@
 # ── composition slots ────────────────────────────────────────────────────────
 # These folders are tracked (their README ships), but everything composed INTO
 # them is the user's own independent git repos — ignored. The router never
-# tracks its guests; that is what "agent-agnostic" means on disk.
-/models/*
-!/models/README.md
+# tracks its guests; that is what "operator-agnostic" means on disk.
+/operators/*
+!/operators/README.md
 /repos/*
 !/repos/README.md
+
+# legacy compat symlink (models -> operators, 2026-07-24 rename)
+/models
 
 # Your commons is a SINGLE repo dropped in at this path (your way of working) —
 # not a container of many guests like models/ and repos/, so the whole directory

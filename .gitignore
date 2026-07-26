@@ -1,28 +1,54 @@
-# OS cruft
-.DS_Store
-**/.DS_Store
+# armillary — deny by default.
+#
+# The router's working directory PHYSICALLY CONTAINS every module composed into it —
+# each an independent git repo, none a submodule. So this file's job is not build
+# artifacts: it keeps the router from swallowing its guests, and keeps a studio's
+# private composition out of a public repo.
+#
+# The model is an ALLOWLIST. Everything in the root is ignored, and the lines below
+# re-include exactly what the router IS — the set `modules.toml` declares in
+# [router] contains. A guest is ignored because it was never allowed, not because
+# someone remembered to name it. Forgetting is therefore safe, and no studio-specific
+# directory name ever has to appear in this public file.
+#
+# Adding a newly tracked file to the router means adding an allow line here. That
+# friction is deliberate: this repo publishes, so publication should be a choice.
 
-# Editor / harness state — per-machine, never ships
-.obsidian/
-.claude/
+/*
+
+!/.gitignore
+!/CLAUDE.md
+!/README.md
+!/LICENSE
+!/getting-started.md
+!/philosophy.md
+!/self.md
+!/modules.toml
 
 # ── composition slots ────────────────────────────────────────────────────────
-# These folders are tracked (their README ships), but everything composed INTO
-# them is the user's own independent git repos — ignored. The router never
-# tracks its guests; that is what "operator-agnostic" means on disk.
+# The slot directories ship their READMEs and nothing else; whatever is composed
+# into them is the user's own independent git repo. The router never tracks its
+# guests — that is what "operator-agnostic" means on disk. (A slot must be
+# re-included before its contents can be re-excluded: git will not descend into
+# an ignored directory.)
+
+!/operators/
 /operators/*
 !/operators/README.md
+
+!/repos/
 /repos/*
 !/repos/README.md
 
-# legacy compat symlink (models -> operators, 2026-07-24 rename)
-/models
+# ── what the allowlist already covers, listed only so it is legible ──────────
+# None of these needs a rule; `/*` has them. Recorded so a reader can see that
+# the coverage is intentional rather than accidental:
+#
+#   the commons — at `commons/` or at whatever name a workspace gives it
+#   modules.local.toml, CLAUDE.local.md — the private overlay. Usually symlinks
+#     into the commons, where the canonical files are synced and version-controlled.
+#   models -> operators — the 2026-07-24 rename compat symlink
+#   .claude/ .pi/ .superpowers/ .obsidian/ — per-machine harness and editor state
+#   system/, local/ — machine-local working directories
 
-# Your commons is a SINGLE repo dropped in at this path (your way of working) —
-# not a container of many guests like models/ and repos/, so the whole directory
-# is ignored. A bare clone has no commons; the README explains how to add one.
-/commons/
-/local
-
-# pi extensions — machine-local, per-session
-/.pi
+**/.DS_Store

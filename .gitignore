@@ -47,7 +47,6 @@
 #   the commons — at `commons/` or at whatever name a workspace gives it
 #   modules.local.toml, CLAUDE.local.md — the private overlay. Usually symlinks
 #     into the commons, where the canonical files are synced and version-controlled.
-#   models -> operators — the 2026-07-24 rename compat symlink
 #   .claude/ .pi/ .superpowers/ .obsidian/ — per-machine harness and editor state
 #   system/, local/ — machine-local working directories
 

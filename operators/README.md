@@ -13,5 +13,9 @@ everything to itself — that is a working host, not an error. Declare what you
 compose in `modules.toml`.
 
 *(Renamed from `models/` 2026-07-24 — the old name collided with "model" meaning
-the engine. Legacy `[[models]]`/`[[agents]]` manifest sections and `models/` paths
-remain accepted by tooling during migration.)*
+the engine. Legacy `[[models]]`/`[[agents]]` manifest sections are still parsed, and
+a manifest may still declare `path = "models/<name>"`, since the path is read from
+the manifest. The `models -> operators` compat symlink is **retired as of
+2026-07-28**: a bare `models/...` path written in prose no longer resolves. It was
+removed on purpose — a symlink that resolves silently means nothing ever breaks, so
+nothing ever gets fixed, and a rename stays permanently unfinished.)*

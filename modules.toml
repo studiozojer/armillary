@@ -16,8 +16,10 @@ contains = ["CLAUDE.md", "README.md", "self.md", "modules.toml", "LICENSE"]
 # an operator is a composed identity (its files, graph, protocols) — distinct from
 # the model (the engine piloting it in a session). each operator is its own git
 # repo, composed under `operators/`. the router routes to whichever are present;
-# declare your own. (legacy section names [[agents]]/[[models]] and `models/`
-# paths remain accepted by tooling during the 2026-07-24 rename migration.)
+# declare your own. (legacy section names [[agents]]/[[models]] are still parsed —
+# a manifest declaring `path = "models/<name>"` still composes, because the path is
+# read from the manifest. the `models -> operators` compat SYMLINK is retired as of
+# 2026-07-28: a bare `models/...` path in prose no longer resolves.)
 
 # [[operators]]
 # name = "<operator>"

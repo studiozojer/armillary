@@ -2,7 +2,7 @@
 
 Minimal, **operator-agnostic router** root. Composes whatever a workspace declares in `modules.toml` — operators, a commons, repos, and the **protocols** they bring — loading each into the session at its declared time (with a gitignored `modules.local.toml` for private, per-machine bindings). **Assumes no operators by default**, and treats a **commons** as standard practice, offering to connect one if absent. A bare clone is still a working host with no modules, and that is fine. See `README.md` for the idea, `modules.toml` for the schema.
 
-**Vocabulary** (2026-07-24): an **operator** is a composed identity — its files, graph, and protocols (formerly "agent"/"model"; the folder was `models/`). The **model** is what pilots it in a given session (Gemma, Fable, Opus…); operators are model-agnostic. *(A model is not an **engine** — in this workspace's vocabulary an engine is a harness implementing the composition standard, `armillary-core`'s normative sense.)* An **instance** is an operator instantiated in a live session window; its **log** is the durable record.
+**Vocabulary** (2026-07-24): an **operator** is a composed identity — its files, graph, and protocols (formerly "agent"/"model"; the folder was `models/` — a `models/<name>/…` path met anywhere is a pre-rename reference, read it at `operators/<name>/…`). The **model** is what pilots it in a given session (Gemma, Fable, Opus…); operators are model-agnostic. *(A model is not an **engine** — in this workspace's vocabulary an engine is a harness implementing the composition standard, `armillary-core`'s normative sense.)* An **instance** is an operator instantiated in a live session window; its **log** is the durable record.
 
 ## Dispatcher protocol
 

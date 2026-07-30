@@ -10,7 +10,23 @@
 
 [router]
 # the minimal core that IS this repo — always present, never a module.
-contains = ["CLAUDE.md", "README.md", "self.md", "modules.toml", "LICENSE"]
+# `.gitignore`'s allowlist mirrors this set; the two had drifted (it re-included
+# getting-started.md and philosophy.md, which this list did not name) and were
+# reconciled 2026-07-29 in favor of the gitignore, which was the correct side.
+contains = ["CLAUDE.md", "README.md", "self.md", "modules.toml", "LICENSE", "getting-started.md", "philosophy.md"]
+
+# `boot` names the router's OWN boot file — read at instance creation and injected
+# as a session's system prompt. One file, relative to this root. Distinct from a
+# module-contributed `[[protocols]]` entry with `load = "boot"`: those carry
+# `requires`, a load timing, and sometimes a companion data file, none of which
+# the router's own file has. Absent means no boot event and no system prompt —
+# presence-gated like everything else here.
+#
+# Prefer a DECLARATIVE file. `CLAUDE.md` is written as instructions to a reader
+# with filesystem access ("read modules.toml", "load self.md before responding");
+# injected into a session with no read tools, it invites a model to confabulate
+# having followed them. State facts instead.
+# boot = "getting-started.md"
 
 # ── operators ────────────────────────────────────────────────────────────────
 # an operator is a composed identity (its files, graph, protocols) — distinct from

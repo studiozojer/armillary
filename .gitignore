@@ -40,6 +40,10 @@
 /repos/*
 !/repos/README.md
 
+!/groves/
+/groves/*
+!/groves/README.md
+
 # ── what the allowlist already covers, listed only so it is legible ──────────
 # None of these needs a rule; `/*` has them. Recorded so a reader can see that
 # the coverage is intentional rather than accidental:

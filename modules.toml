@@ -13,7 +13,11 @@
 # `.gitignore`'s allowlist mirrors this set; the two had drifted (it re-included
 # getting-started.md and philosophy.md, which this list did not name) and were
 # reconciled 2026-07-29 in favor of the gitignore, which was the correct side.
-contains = ["CLAUDE.md", "README.md", "self.md", "modules.toml", "LICENSE", "getting-started.md", "philosophy.md"]
+# Reconciled again 2026-08-26, once more in favor of the filesystem: this list named
+# 7 files while git tracked 10, omitting `.gitignore` (which allowlists itself) and
+# the two slot READMEs. `groves/README.md` is allowlisted but untracked — the slot
+# ships no README since bbbb306 — so it is not named here.
+contains = [".gitignore", "CLAUDE.md", "README.md", "self.md", "modules.toml", "LICENSE", "getting-started.md", "philosophy.md", "operators/README.md", "repos/README.md"]
 
 # `boot` names the router's OWN boot file — read at instance creation and injected
 # as a session's system prompt. One file, relative to this root. Distinct from a
